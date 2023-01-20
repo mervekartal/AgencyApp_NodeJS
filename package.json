@@ -1,0 +1,30 @@
+{
+  "name": "appagency",
+  "version": "1.0.0",
+  "description": "agency app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mervekartal/AgencyApp_NodeJS.git"
+  },
+  "keywords": [
+    "nodejs",
+    "app"
+  ],
+  "author": "merve",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mervekartal/AgencyApp_NodeJS/issues"
+  },
+  "homepage": "https://github.com/mervekartal/AgencyApp_NodeJS#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
