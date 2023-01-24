@@ -34,6 +34,10 @@ app.set("view engine", "ejs")
 //routes
 app.get('/', pageController.getIndexPage) //index
 app.get('/add', pageController.getAddPage) //add
+app.get('/services', pageController.getServicesPage) //services
+app.get('/about', pageController.getAboutPage) //about
+app.get('/team', pageController.getTeamPage) //team
+app.get('/contact', pageController.getContactPage) //team
 // app.get('/portfolios', pageController.getPortfoliosPage) //portfolios
 app.post('/portfolios', portfolioController.createPortfolio) //add portfolio - post operation
 app.get('/portfolios',portfolioController.getAllPortfolios) //portfolios - all portfolio

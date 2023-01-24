@@ -14,3 +14,23 @@ exports.getPortfoliosPage = (req,res) => {
         page_name: "portfolios"
     })
 }
+exports.getServicesPage = (req,res) => {
+    res.status(200).render('services',{
+        page_name: "services"
+    })
+}
+exports.getAboutPage = (req,res) => {
+    res.status(200).render('about',{
+        page_name: "about"
+    })
+}
+exports.getTeamPage = (req,res) => {
+    res.status(200).render('team',{
+        page_name: "team"
+    })
+}
+exports.getContactPage = (req,res) => {
+    res.status(200).render('contact',{
+        page_name: "contact"
+    })
+}
