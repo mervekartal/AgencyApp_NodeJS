@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const slugify = require('slugify')
 const Schema = mongoose.Schema 
 
 //create schema
@@ -12,9 +13,6 @@ const PortfolioSchema = new Schema({
         type: String,
         required: true,
         trim: true
-    },
-    image: {
-        type: String,
     },
     createdAt: {
         type: Date,

@@ -143,5 +143,6 @@ dist
 
 #Temproray Files
 .DS_Store
+uploads/
 
 # End of https://www.toptal.com/developers/gitignore/api/node

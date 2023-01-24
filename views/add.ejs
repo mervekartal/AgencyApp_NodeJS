@@ -1,0 +1,34 @@
+<%- include('partials/_header') -%>
+    <%- include('partials/_navigation') -%>
+
+<section class="page-section" id="contact">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Add A New Portfolio</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+        <form action="/portfolios" method="POST" id="contactForm">
+            <div class="row align-items-stretch mb-5">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <!-- Name input-->
+                        <input class="form-control" id="name" type="text" placeholder="Portfolio Name"  />
+                    </div>
+                    <div class="form-group">
+                        <!-- Description input-->
+                        <textarea rows="8" class="form-control" id="description" placeholder="Description" ></textarea> 
+                    </div>
+                    <!-- <div class="form-group">
+                        <input type="file" name="image" class="form-control-file"></input>
+                    </div> -->
+
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-xl text-uppercase"><span>Save</span></button>
+            </div>
+
+        </form>
+    </div>
+</section>
+<%- include('partials/_footer') -%>
