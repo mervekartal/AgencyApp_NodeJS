@@ -1,3 +1,4 @@
+const Portfolio = require("../models/Portfolio")
 
 exports.getIndexPage = (req,res) => {
     res.status(200).render('index',{
@@ -34,3 +35,11 @@ exports.getContactPage = (req,res) => {
         page_name: "contact"
     })
 }
+exports.getEditPage = async (req,res) => {
+    const portfolio = await Portfolio.findOne({slug: req.params.slug})
+    res.status(200).render('edit',{
+        portfolio,
+        page_name: "edit"
+    })
+}
+

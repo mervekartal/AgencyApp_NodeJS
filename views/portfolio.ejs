@@ -1,0 +1,72 @@
+<%- include('partials/_header') -%>
+    <%- include('partials/_navigation') -%>
+        
+        <!-- About-->
+        <section class="page-section bg-dark" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h3 class="section-heading text-white text-uppercase">Portfolio Profile</h3>
+                    <br>
+                </div>
+                <!-- <ul>
+                    <li> -->
+                        <div class="row">
+                            <div class="col-md-6"><img class="img" src="/assets/img/portfolio/1.jpg" alt="..." /><br>
+                            </div>    
+                            <div class="col-md-6">
+                                <a class="btn btn-secondary" href="/portfolios/edit/<%= portfolio.slug %>"">Edit</a>
+                                <a class="btn btn-danger" href="/portfolios/<%= portfolio.slug %>?_method=DELETE" onclick="return confirm('Are you sure?')">Delete</a>
+                                <hr>
+                               <span> <h5 class="text-white"><%= portfolio.name %></h5></span>
+                               <span> <p class="text-white"><%= portfolio.description %></p></span>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="updatePortfolio<%=portfolio.slug %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body customer-box">
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="Login">
+                                                <form method="POST" action="/portfolios/<%=portfolio.slug %>?_method=PUT" class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" name="name" value="<%=portfolio.name %>"class="form-control"  placeholder="Portfolio Name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="col-sm-12">
+                                                            <textarea rows="8" name="description" class="form-control"
+                                                            placeholder="Portfolio Description" required><%=portfolio.description %></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-10">
+                                                            <button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+                                                                Update
+                                                            </button>
+                                                            <button type="submit" class="btn btn-light btn-radius btn-brd grd1"
+                                                                data-dismiss="modal" aria-hidden="true">
+                                                                Cancel
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- <div class="timeline-panel">
+                            <div></div>
+                        </div> -->
+                    <!-- </li>
+                </ul> -->
+            </div>
+        </section>
+<%- include('partials/_footer') -%>

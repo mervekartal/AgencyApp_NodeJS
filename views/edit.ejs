@@ -4,19 +4,19 @@
 <section class="page-section" id="contact">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Add A New Portfolio</h2>
+            <h3 class="section-heading text-uppercase">Update Portfolio Info</h3>
             <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
-        <form action="/portfolios" method="POST" id="contactForm">
+        <form method="POST" action="/portfolios/<%=portfolio.slug %>?_method=PUT" id="contactForm">
             <div class="row align-items-stretch mb-5">
                 <div class="col-md-12">
                     <div class="form-group">
                         <!-- Name input-->
-                        <input class="form-control" name="name" type="text" placeholder="Portfolio Title"  />
+                        <input class="form-control" name="name" value="<%= portfolio.name %>" type="text" placeholder="Portfolio Title"  />
                     </div>
                     <div class="form-group">
                         <!-- Description input-->
-                        <textarea rows="8" class="form-control" name="description" placeholder="Description" ></textarea> 
+                        <textarea rows="8" class="form-control" name="description" placeholder="Description" required><%= portfolio.description %></textarea> 
                     </div>
                     <!-- <div class="form-group">
                         <input type="file" name="image" class="form-control-file"></input>
