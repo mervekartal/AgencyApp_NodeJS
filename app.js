@@ -43,7 +43,7 @@ app.get('/add', pageController.getAddPage) //add
 app.get('/services', pageController.getServicesPage) //services
 app.get('/about', pageController.getAboutPage) //about
 app.get('/team', pageController.getTeamPage) //team
-app.get('/contact', pageController.getContactPage) //team
+app.get('/contact', pageController.getContactPage) //contact
 app.get('/portfolios/edit/:slug', pageController.getEditPage)//edit page route
 
 // app.get('/portfolios', pageController.getPortfoliosPage) //portfolios
